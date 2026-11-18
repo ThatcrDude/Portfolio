@@ -737,10 +737,17 @@ main {
   display: block;
 }
 
+/* Gallery: 4 cards per row (2 on tablets, 1 on phones). A last row that is not full is centred. */
 .tgrid {
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 26px 22px;
+}
+
+.tgrid > .tk {
+  flex: 0 0 calc((100% - 66px) / 4);
+  min-width: 0;
 }
 
 .tk {
@@ -968,8 +975,8 @@ footer {
   .exp {
     grid-template-columns: 1fr;
   }
-  .tgrid {
-    grid-template-columns: 1fr 1fr;
+  .tgrid > .tk {
+    flex-basis: calc((100% - 22px) / 2);
   }
   .xp {
     grid-template-columns: 1fr;
@@ -986,8 +993,8 @@ footer {
 }
 
 @media (max-width:480px) {
-  .tgrid {
-    grid-template-columns: 1fr;
+  .tgrid > .tk {
+    flex-basis: 100%;
   }
 }
 
@@ -1953,10 +1960,17 @@ html.locked body {
   transition: opacity .45s ease;
 }
 
+/* Videos: 3 cards per row (2 on tablets, 1 on phones). A last row that is not full is centred. */
 .vgrid {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 26px 24px;
+}
+
+.vgrid > .vcard {
+  flex: 0 0 calc((100% - 48px) / 3);
+  min-width: 0;
 }
 
 .vcard {
@@ -2078,14 +2092,14 @@ html.locked body {
 }
 
 @media (max-width:900px) {
-  .vgrid {
-    grid-template-columns: 1fr 1fr;
+  .vgrid > .vcard {
+    flex-basis: calc((100% - 24px) / 2);
   }
 }
 
 @media (max-width:560px) {
-  .vgrid {
-    grid-template-columns: 1fr;
+  .vgrid > .vcard {
+    flex-basis: 100%;
   }
 }
 
