@@ -22,7 +22,7 @@ To update later, edit or upload files in the repo and commit; the site refreshes
 
 ## Common edits
 - **Links:** open `js/links.js` and paste each full address between the quotes.
-- **CV:** the download button uses `assets/Lim_Cheng_Rui_CV.pdf`. The pop-up reader uses `assets/cv-page-1.jpg` and `assets/cv-page-2.jpg`. When your CV changes, replace the PDF (same name) and the two page images.
+- **CV:** the download button uses `assets/Lim_Cheng_Rui_CV.pdf`. The pop-up reader uses `assets/cv-page-1.jpg` and `assets/cv-page-2.jpg`. When your CV changes, replace the PDF (same name) and the two page images. The CV is built from `cv-source/cv.html`: edit that file, then run `python3 cv-source/build.py` to regenerate the PDF and both page images (needs Python with Playwright/Chromium and poppler's `pdftoppm`).
 - **Add a gallery picture:** in `index.html`, copy one `<figure class="tk">` block, change the image name and the two text lines.
 - **Add a video:** in `index.html`, copy one `<button class="vcard">` block (the note at the end of the Videos section explains the codes).
 - **Tab icon (favicon):** `assets/favicon.svg` is your LR logo as a vector (the colour is the `fill` value inside the file). `assets/favicon-32.png` and `assets/apple-touch-icon.png` are fallbacks for older browsers and the iPhone home screen. Keep the same file names if you swap them.

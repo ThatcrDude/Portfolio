@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>Lim Cheng Rui – CV</title>
+<style>
+@page{size:A4;margin:0}
+:root{--ink:#2b221d;--cream:#fff8ee;--orange:#e8873a;--green:#4a6b4a;--muted:#7a6f66}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{font-family:Carlito,Calibri,sans-serif;color:#2d2926;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:210mm;height:297mm;display:flex;position:relative;overflow:hidden;page-break-after:always;background:var(--cream)}
+.page:last-child{page-break-after:auto}
+.side{width:67mm;background:var(--ink);color:#f3e9dc;padding:10mm 8mm;position:relative;
+ background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:5mm 5mm}
+.tape{position:absolute;top:6mm;left:-9mm;width:34mm;height:8mm;transform:rotate(-38deg);background:#f4d95b;
+ background-image:radial-gradient(#ee6f9a 28%,transparent 30%);background-size:3.4mm 3.4mm;opacity:.95}
+.mug{width:41mm;height:41mm;border-radius:50%;border:1.6mm solid var(--orange);outline:1mm solid #fff8ee;margin:2mm auto 8mm;overflow:hidden;background:#fff}
+.mug img{width:100%;height:100%;object-fit:cover}
+.side h2{font-family:Lora,serif;font-size:15pt;font-weight:600;color:#fff;margin-bottom:3mm;padding-bottom:1.6mm;position:relative}
+.side h2:after{content:"";position:absolute;left:0;bottom:0;width:10mm;height:.7mm;background:var(--orange)}
+.lab{font-size:6.5pt;letter-spacing:.2em;font-weight:700;color:#f3c58e;margin-top:2.4mm;text-transform:uppercase}
+.val{font-size:9.4pt;line-height:1.25;word-break:break-all}
+.side section{margin-bottom:7mm}
+.grp{font-size:7pt;letter-spacing:.2em;font-weight:700;color:#cdbfae;margin:3.4mm 0 1.6mm;text-transform:uppercase}
+.tags{display:flex;flex-wrap:wrap;gap:1.4mm}
+.tag{font-size:8.6pt;padding:.7mm 2.6mm;border-radius:99px;border:.25mm solid rgba(243,233,220,.45);color:#f3e9dc}
+.tag.hi{background:var(--orange);border-color:var(--orange);color:#2b221d;font-weight:700}
+.tag.o{border-color:var(--orange)}
+.main{flex:1;padding:11mm 11mm 9mm 9mm;position:relative;display:flex;flex-direction:column}
+.name{font-family:Lora,serif;font-style:italic;font-weight:700;font-size:34pt;line-height:1;color:var(--ink)}
+.role{color:var(--orange);font-weight:700;font-size:11pt;margin-top:3mm;white-space:nowrap}
+.sub{color:var(--muted);font-size:9.6pt;margin-top:1mm}
+h3.sec{font-family:Lora,serif;font-size:14pt;color:var(--green);font-weight:600;margin:5mm 0 2.6mm;position:relative;padding-bottom:1.8mm}
+h3.sec:after{content:"";position:absolute;left:0;bottom:0;width:11mm;height:.8mm;background:var(--orange)}
+.prof{font-size:10.4pt;line-height:1.42}
+.card{background:#fffdf9;border:.3mm solid #eadfce;border-left:1.2mm solid var(--orange);border-radius:2.4mm;padding:2.6mm 4mm;margin-bottom:2.6mm}
+.card .top{display:flex;justify-content:space-between;align-items:baseline;gap:3mm}
+.card h4{font-family:Lora,serif;font-size:11.6pt;font-weight:600;color:var(--ink)}
+.pill{font-size:6.6pt;letter-spacing:.14em;font-weight:700;color:var(--green);background:#e9f0e4;padding:.7mm 2.4mm;border-radius:99px;white-space:nowrap;text-transform:uppercase}
+.card .r{color:var(--orange);font-weight:700;font-size:9.2pt;margin:.4mm 0 1.4mm}
+.card ul{list-style:none}
+.card li{font-size:9.2pt;line-height:1.34;padding-left:3.2mm;position:relative;margin-bottom:.9mm}
+.card li:before{content:"–";position:absolute;left:0;color:var(--muted)}
+.card .lk{font-size:8.6pt;color:var(--green);font-weight:700;margin-top:1.2mm}
+.card .lk a{color:var(--green);text-decoration:none}
+.card .how{font-size:9pt;font-style:italic;color:#4b433c;line-height:1.35;margin-bottom:1.4mm}
+.foot{margin-top:auto;border-top:.25mm solid #e4d8c6;padding-top:2.2mm;display:flex;justify-content:space-between;font-size:8pt;color:var(--muted)}
+/* education / timeline */
+.edu{display:flex;gap:4mm;margin-bottom:3.4mm}
+.edu .yr{width:20mm;color:var(--orange);font-weight:700;font-size:9.4pt;flex:none}
+.edu h4{font-family:Lora,serif;font-size:11.2pt;font-weight:600}
+.edu .d{color:var(--muted);font-size:8.8pt;line-height:1.3}
+.edu .l{font-size:9.2pt;line-height:1.35;margin-top:1.2mm}
+.xp{margin-bottom:3.4mm}
+.xp h4{font-family:Lora,serif;font-size:10.6pt;font-weight:600}
+.xp .o{color:var(--orange);font-weight:700;font-size:8.8pt}
+.xp p{font-size:9.3pt;line-height:1.38;margin-top:.6mm}
+.xp b.t{color:var(--orange)}
+.quote{border-left:.9mm solid var(--orange);background:rgba(255,255,255,.07);padding:2.4mm 3mm;margin-bottom:3mm;border-radius:0 1.6mm 1.6mm 0}
+.quote p{font-family:Lora,serif;font-style:italic;font-size:8.8pt;line-height:1.35;color:#f3e9dc}
+.quote b{display:block;margin-top:1.4mm;font-size:6.6pt;letter-spacing:.16em;color:#f3c58e;text-transform:uppercase;font-family:Carlito,sans-serif;font-style:normal}
+.bul{list-style:none}
+.bul li{font-size:9.2pt;padding-left:3mm;position:relative;margin-bottom:1mm}
+.bul li:before{content:"•";position:absolute;left:0;color:var(--orange)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:3mm}
+.mini{background:#fffdf9;border:.3mm solid #eadfce;border-radius:2.2mm;padding:2.6mm 3.2mm}
+.mini h4{font-family:Lora,serif;font-size:10pt;font-weight:600}
+.mini .v{display:inline-block;margin-left:1.4mm;font-size:6.8pt;font-weight:700;letter-spacing:.06em;background:#f4d98a;color:#4d3b10;padding:.3mm 1.8mm;border-radius:99px;vertical-align:1px}
+.mini p{font-size:8.7pt;line-height:1.3;margin-top:.8mm}
+.mini .o{color:var(--orange);font-weight:700;font-size:8.2pt;margin-top:.8mm}
+</style></head><body>
+
+<!-- ============ PAGE 1: projects first ============ -->
+<div class="page">
+ <aside class="side"><div class="tape"></div>
+  <div class="mug"><img src="cv-photo.jpg" alt=""></div>
+  <section><h2>Contact</h2>
+   <div class="lab">Email</div><div class="val">limchengrui01@gmail.com</div>
+   <div class="lab">Phone</div><div class="val">+65 8368 5638</div>
+   <div class="lab">LinkedIn</div><div class="val">linkedin.com/in/cheng-rui-lim</div>
+   <div class="lab">GitHub</div><div class="val">github.com/ThatcrDude</div>
+   <div class="lab">ArtStation</div><div class="val">artstation.com/limchengrui3</div>
+  </section>
+  <section><h2>Skills</h2>
+   <div class="grp">Languages</div><div class="tags"><span class="tag hi">C#</span><span class="tag hi">Python</span><span class="tag hi">HTML</span><span class="tag hi">CSS</span></div>
+   <div class="grp">Engines</div><div class="tags"><span class="tag hi">Unity</span><span class="tag hi">Unreal Engine</span></div>
+   <div class="grp">Programming tools</div><div class="tags"><span class="tag o">VS Code</span><span class="tag o">Visual Studio</span><span class="tag o">GitHub</span></div>
+   <div class="grp">Game design</div><div class="tags"><span class="tag">Level design</span><span class="tag">Game UI/UX</span><span class="tag">Figma</span></div>
+   <div class="grp">3D &amp; art</div><div class="tags"><span class="tag">Autodesk Maya</span><span class="tag">Basic 3D animation</span><span class="tag">Krita</span></div>
+   <div class="grp">Content</div><div class="tags"><span class="tag">CapCut</span><span class="tag">Alight Motion</span></div>
+  </section>
+ </aside>
+ <div class="main">
+  <div class="name">Lim Cheng Rui</div>
+  <div class="role">Game Programming Student | Seeking Game Programming Internship</div>
+  <div class="sub">Diploma in Media, Arts and Design (Animation &amp; Games) · Singapore Polytechnic</div>
+  <div class="sub" style="color:var(--green);font-weight:700">Available for internship from 17 March 2027</div>
+
+  <h3 class="sec">Profile</h3>
+  <p class="prof">Game programming student. I built the money, inventory, damage and item-drop systems for a Year 2 Unity team game, and I made Kon, a real-time AI VTuber in Python that reads Twitch chat and talks back. I also design game UI and make content. I work clearly, honestly and on time.</p>
+
+  <h3 class="sec">Game &amp; interactive projects</h3>
+
+  <div class="card">
+   <div class="top"><h4>Kon, my AI VTuber</h4><span class="pill">Personal project</span></div>
+   <div class="r">Programmer · Creator · Python, VS Code</div>
+   <div class="how">When someone says Kon’s name in Twitch chat, my code reads the message, sends it to her language model, and posts and speaks the reply in her personality.</div>
+   <ul>
+    <li>Wrote the name trigger that makes Kon read chat, sent each message to her LLM for a reply in her personality, and posted it to Twitch chat.</li>
+    <li>Connected VoiceVox so Kon speaks the same sentence out loud, and added Whisper speech input and VTube Studio lip sync.</li>
+    <li>Added memory and relationship tracking, a FastAPI dashboard, and attention scoring to decide when to reply. Kon is at version 42.</li>
+   </ul>
+   <div class="lk">Demo: <a href="https://youtu.be/EZslHQySzoM?t=34">youtu.be/EZslHQySzoM?t=34</a></div>
+  </div>
+
+  <div class="card">
+   <div class="top"><h4>Ministry of Organised Chaos</h4><span class="pill">Team game · Year 2</span></div>
+   <div class="r">System Programmer · Level Designer · C#, Unity, VS Code</div>
+   <div class="how">I built a money generator in Unity using C#, so players earn enough money to place down units.</div>
+   <ul>
+    <li>Programmed the inventory system, the damage indicator system, and item drops when an enemy is defeated.</li>
+    <li>Stayed late with the team to fix bugs, such as enemies not spawning and towers not detecting them to shoot.</li>
+    <li>Fixed the damage indicator not showing in play, with a teammate’s help.</li>
+    <li>Playtested the levels again and again so they were not too easy to clear.</li>
+   </ul>
+   <div class="lk">Gameplay video: <a href="https://youtu.be/EQ76uDisbeY?t=60">youtu.be/EQ76uDisbeY?t=60</a> (money generator)</div>
+  </div>
+
+  <div class="card">
+   <div class="top"><h4>Game UI/UX for Moneyless Studio</h4><span class="pill">Client work</span></div>
+   <div class="r">Game Designer (UI/UX) · Figma</div>
+   <ul>
+    <li>Designed every screen and flow: title, home, quest selector, win and lose, shop and credits, so players can pick a level and see whether they won or lost.</li>
+    <li>The client disliked the settings screen, so I redesigned it over several rounds until they were happy.</li>
+   </ul>
+  </div>
+
+  <div class="card" style="margin-bottom:0">
+   <div class="top"><h4>Chibi NIKKE effect</h4><span class="pill">TikTok effect</span></div>
+   <div class="r">Programmer · Basic 3D animation · Mapping</div>
+   <ul><li>Made in TikTok Effect Studio, with mapping and basic 3D animation.</li></ul>
+  </div>
+
+  <div class="foot"><span>Lim Cheng Rui · Curriculum vitae</span><span>1 / 2</span></div>
+ </div>
+</div>
+
+<!-- ============ PAGE 2: everything else ============ -->
+<div class="page">
+ <aside class="side"><div class="tape"></div>
+  <section style="margin-top:16mm"><h2>Client feedback</h2>
+   <div class="quote"><p>“Cheng Rui’s design fits perfectly with our club’s theme.”</p><b>SP Wing Chun</b></div>
+   <div class="quote"><p>“The UI/UX made for the game helps our players have a better experience.”</p><b>Moneyless Studio</b></div>
+  </section>
+  <section><h2>Languages</h2><p class="val" style="word-break:normal">English · Mandarin</p></section>
+  <section><h2>Interests</h2>
+   <ul class="bul" style="color:#f3e9dc"><li>Wing Chun</li><li>Singing</li><li>Gaming</li><li>Cooking</li><li>Photography</li></ul>
+  </section>
+ </aside>
+ <div class="main">
+  <div class="name" style="font-size:24pt">Lim Cheng Rui</div>
+  <div class="sub" style="margin-top:2mm">Education, club leadership, media work and part-time jobs</div>
+
+  <h3 class="sec">Education</h3>
+  <div class="edu"><div class="yr">2024 – Present</div><div>
+   <h4>Singapore Polytechnic</h4>
+   <div class="d">Diploma in Media, Arts and Design (Animation &amp; Games) · Game Programming Track</div>
+   <div class="l">Vice-President of SP Wing Chun (2024 – 2025). Also social media manager, and performer and booth operator at CCA Carnival 2024.</div>
+  </div></div>
+  <div class="edu"><div class="yr">2020 – 2023</div><div>
+   <h4>Junyuan Secondary School</h4>
+   <div class="l" style="margin-top:.6mm">President of Infocomm Technology (Computing). Took part in First Lego League and Hack@AC.</div>
+  </div></div>
+
+  <h3 class="sec">Club &amp; creative experience</h3>
+  <div class="xp"><h4>Social Media Manager <span class="o">· SP Wing Chun</span></h4>
+   <p><b class="t">Task</b> Ran the club’s social media and edited its videos. <b class="t">Result</b> More recognition and sign-ups. The pinned TikTok video reached 54.7K views.</p></div>
+  <div class="xp"><h4>Graphic Designer <span class="o">· SP Wing Chun</span></h4>
+   <p><b class="t">Task</b> Designed club posters, including the CCA Carnival poster and the SP Karate × SP Wing Chun workshop poster. <b class="t">Result</b> More students visited the club and signed up.</p></div>
+  <div class="xp"><h4>The Third Space <span class="o">· Final year project</span></h4>
+   <p>Editor and layout artist on the group’s graphic novel and animated film, and sourced the printer for the printed copies.</p></div>
+
+  <h3 class="sec">Video &amp; content</h3>
+  <div class="grid2">
+   <div class="mini"><h4>Viral clip <span class="v">477K views</span></h4><p>Cut a clip for a content creator that went viral.</p><div class="o">Video clipper</div></div>
+   <div class="mini"><h4>Short horror video</h4><p>Filmed and edited a video built around a two-sentence horror story.</p><div class="o">Cameraman · Editor</div></div>
+  </div>
+  <p style="font-size:8.8pt;color:var(--muted);margin-top:2.4mm">More video edits, posters and photography are on my portfolio.</p>
+
+  <h3 class="sec">Work experience</h3>
+  <div class="xp"><h4>Porter and Customer Service</h4><div class="o">Intercruises Shoreside &amp; Port Services · MBCCS</div></div>
+  <div class="xp"><h4>Newspaper Delivery</h4><p style="margin-top:0">Part-time</p></div>
+  <div class="xp"><h4>Warehouse Part-timer</h4><p style="margin-top:0">Part-time</p></div>
+
+  <div class="foot"><span>+65 8368 5638 · limchengrui01@gmail.com</span><span>2 / 2</span></div>
+ </div>
+</div>
+</body></html>
